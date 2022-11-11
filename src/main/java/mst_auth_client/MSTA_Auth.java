@@ -16,13 +16,10 @@ import mst_auth_library.MST_Auth_BaseClientWrapper;
 import mst_auth_library.MST_Auth_BaseServlet;
 import mst_auth_library.MST_Auth_ClientWrapper;
 import mst_auth_library.MST_Auth_Servlet;
+import mst_auth_library.MST_Auth_Microservice;
 
-public class MST_Auth_Client {
-	private MST_Auth_BaseClientWrapper msta_library;
-	public MST_Auth_Client() {
-	}
-	public void SetLibrary (MST_Auth_BaseClientWrapper MSTALibrary ) {
-		msta_library = MSTALibrary;			
+public class MSTA_Auth   extends MST_Auth_Microservice{
+	public MSTA_Auth() {
 	}
 	public void doGet(HttpServletRequest request, HttpServletResponse response, String trustedbody) throws IOException, MSTAException  {
 		String input = request.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
